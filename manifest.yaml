@@ -4,6 +4,7 @@ metadata:
   name: adservice
   namespace: ${namespace}
 spec:
+  replicas: ${replicas}
   selector:
     matchLabels:
       app: adservice
@@ -12,7 +13,6 @@ spec:
       labels:
         app: adservice
     spec:
-      replicas: ${replicas}
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       securityContext:
